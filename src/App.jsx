@@ -4,7 +4,8 @@ import ToolsList from "./components/ToolsList";
 import SportsGallery from "./components/SportsGallery";
 import Formulario from "./components/Formulario";
 import FormularioR from "./components/FormularioR";
-import Taller from "./components/Taller"
+import Taller from "./components/Taller";
+import TareaFormulario from "./components/TareaFormulario"
 import "./App.css";
 
 function App() {
@@ -16,16 +17,17 @@ function App() {
       <ToolsList />
       <SportsGallery />
       <div>
-      <h2>Opción 1: Comentarios</h2>
       <Formulario />
       </div>
       <div>
-      <h2>Opción 2: Registro</h2>
       <FormularioR />
       </div>
       <div>
-      <h2>Taller: Formulario</h2>
+      <h2>Taller - React</h2>
       <Taller />
+      </div>
+      <div>
+      <TareaFormulario />
       </div>
     </div>
     

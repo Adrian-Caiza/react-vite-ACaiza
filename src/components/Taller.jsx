@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/Formulario.css'; // Importa el archivo CSS
 
 const Taller = () => {
   // Estados para manejar los valores de cada campo
@@ -8,6 +7,8 @@ const Taller = () => {
   const [carrera, setCarrera] = useState('');
   const [materia, setMateria] = useState('');
   const [fecha, setFecha] = useState('');
+  const [credito, setCredito] = useState(''); // Nuevo estado para número de crédito
+  const [docente, setDocente] = useState(''); // Nuevo estado para docente
   const [mensaje, setMensaje] = useState(''); // Estado para mostrar el mensaje final
 
   // Función para manejar el envío del formulario
@@ -22,10 +23,11 @@ const Taller = () => {
   <div
       style={{
         justifyContent: 'center', 
-        alignItems: 'center', 
-        height: '100vh', 
+        alignItems: 'center',  
         textAlign: 'center', 
+        minHeight: '50vh',
         flexDirection: 'column', 
+        margin: '10px 0',
       }}
 >
     <div>
@@ -84,6 +86,28 @@ const Taller = () => {
             onChange={(e) => setFecha(e.target.value)}
           />
         </label>
+
+        {/* Campo de número de crédito */}
+        <label>
+            Número de crédito:
+            <input
+              type="text"
+              value={credito}
+              onChange={(e) => setCredito(e.target.value)}
+              placeholder="Ingresa el número de crédito"
+            />
+          </label>
+
+          {/* Campo de docente */}
+          <label>
+            Docente:
+            <input
+              type="text"
+              value={docente}
+              onChange={(e) => setDocente(e.target.value)}
+              placeholder="Ingresa el nombre del docente"
+            />
+          </label>
 
         {/* Botón de envío */}
         <button type="submit">Registrar</button>
